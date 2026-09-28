@@ -1,14 +1,16 @@
 /* ==========================================================================
    MUHAMMAD SHER CHHEENA LAW OFFICE — OFFICIAL STYLESHEET
    Aesthetic: World-Class Oxford Navy & Crisp White Legal Chambers
+   Architecture: Big-Law Institutional Web Design
    ========================================================================== */
 
 :root {
   /* Elite Law Firm Color Palette */
-  --navy-deep: #0a192f;
-  --navy-primary: #0f233d;
-  --navy-medium: #183354;
-  --navy-light: #20436e;
+  --navy-deep: #071324;
+  --navy-primary: #0b1e38;
+  --navy-medium: #142e52;
+  --navy-light: #1f4273;
+  --navy-soft: #f0f4f9;
   
   /* Antique Legal Gold & Brass */
   --gold-primary: #c5a059;
@@ -25,7 +27,7 @@
   
   /* Text & Charcoal Tones */
   --text-primary: #0f172a;
-  --text-navy: #0f233d;
+  --text-navy: #0b1e38;
   --text-secondary: #475569;
   --text-muted: #64748b;
   --text-light: #f8fafc;
@@ -48,7 +50,7 @@
   --shadow-subtle: 0 4px 14px rgba(15, 35, 61, 0.05);
   --shadow-card: 0 8px 24px rgba(15, 35, 61, 0.08);
   --shadow-hover: 0 16px 36px rgba(15, 35, 61, 0.12);
-  --shadow-navy: 0 12px 32px rgba(10, 25, 47, 0.35);
+  --shadow-navy: 0 12px 32px rgba(7, 19, 36, 0.4);
   
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -72,7 +74,7 @@ body {
   color: var(--text-primary);
   line-height: 1.65;
   overflow-x: hidden;
-  padding-bottom: 74px; /* Space for mobile bottom bar */
+  padding-bottom: 74px; /* Space for mobile sticky action bar */
 }
 
 @media (min-width: 900px) {
@@ -89,7 +91,7 @@ body {
 /* Section Header Typography */
 .section-head {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 52px;
 }
 
 .section-kicker {
@@ -120,7 +122,7 @@ body {
 
 .section-subtitle {
   color: var(--text-secondary);
-  font-size: clamp(14.5px, 1.8vw, 16px);
+  font-size: clamp(14.5px, 1.8vw, 16.5px);
   max-width: 680px;
   margin: 0 auto;
 }
@@ -189,17 +191,17 @@ body {
 }
 
 /* ==========================================================================
-   EXECUTIVE NAVIGATION (DEEP NAVY WITH WARM GOLD ACCENTS)
+   EXECUTIVE NAVIGATION (OXFORD NAVY WITH GOLD ACCENTS)
    ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(15, 35, 61, 0.98);
+  background: rgba(11, 30, 56, 0.98);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 2px solid var(--gold-primary);
-  box-shadow: 0 4px 20px rgba(10, 25, 47, 0.25);
+  box-shadow: 0 4px 20px rgba(7, 19, 36, 0.3);
   transition: all 0.3s ease;
 }
 
@@ -224,13 +226,13 @@ body {
 .brand-crest {
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, #1c3657, #0f233d);
+  background: linear-gradient(135deg, #183863, #0b1e38);
   border: 1.5px solid var(--gold-primary);
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   flex-shrink: 0;
 }
 
@@ -311,7 +313,7 @@ body {
 
 .btn-gold {
   background: linear-gradient(135deg, #c5a059, #b38e46);
-  color: #0a192f;
+  color: #071324;
   font-weight: 800;
   font-size: 13px;
   padding: 10px 20px;
@@ -437,13 +439,120 @@ body {
 }
 
 /* ==========================================================================
+   OFFICIAL PRESTIGE BANNER SECTION (DIRECT RECREATION OF SCREENSHOT 2)
+   ========================================================================== */
+.prestige-banner-section {
+  background: var(--navy-deep);
+  padding: 30px 0 0;
+}
+
+.banner-card {
+  position: relative;
+  background: linear-gradient(135deg, #0e2038 0%, #06101d 50%, #0b1a2e 100%);
+  border: 3px double var(--gold-primary);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 35px rgba(197, 160, 89, 0.15);
+  overflow: hidden;
+}
+
+.banner-card::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px dashed rgba(197, 160, 89, 0.35);
+  border-radius: calc(var(--radius-lg) - 4px);
+  pointer-events: none;
+}
+
+.banner-crest-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  background: rgba(197, 160, 89, 0.12);
+  border: 1.5px solid var(--gold-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(197, 160, 89, 0.25);
+}
+
+.banner-crest-icon svg {
+  width: 34px;
+  height: 34px;
+  fill: var(--gold-primary);
+}
+
+.banner-main-title {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 4vw, 42px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.banner-main-title span {
+  color: var(--gold-light);
+}
+
+.banner-tagline {
+  font-size: clamp(14px, 2vw, 18px);
+  color: var(--gold-light);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.banner-scope {
+  font-family: var(--font-serif);
+  font-size: clamp(13px, 1.8vw, 16px);
+  color: #cbd5e1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.banner-motto-wrap {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.05);
+  border-block: 1px solid var(--gold-border);
+  padding: 10px 24px;
+  margin-bottom: 20px;
+}
+
+.banner-motto-wrap em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(14px, 1.8vw, 17px);
+  color: #f1f5f9;
+  letter-spacing: 0.5px;
+}
+
+.banner-values-footer {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
    HERO SECTION (CLASSIC OXFORD NAVY)
    ========================================================================== */
 .hero-section {
   position: relative;
-  background: linear-gradient(165deg, #0a192f 0%, #0f233d 60%, #0d1e35 100%);
+  background: linear-gradient(180deg, var(--navy-deep) 0%, #0b1e38 100%);
   color: #ffffff;
-  padding: 60px 0 74px;
+  padding: 50px 0 74px;
   overflow: hidden;
   border-bottom: 1px solid var(--line-light);
 }
@@ -473,9 +582,9 @@ body {
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(30px, 4.2vw, 50px);
+  font-size: clamp(28px, 4vw, 46px);
   font-weight: 700;
-  line-height: 1.16;
+  line-height: 1.18;
   color: #ffffff;
   margin-bottom: 16px;
   letter-spacing: 0.3px;
@@ -483,22 +592,6 @@ body {
 
 .hero-title span {
   color: var(--gold-light);
-}
-
-.hero-motto-box {
-  background: rgba(255, 255, 255, 0.05);
-  border-left: 3px solid var(--gold-primary);
-  padding: 12px 16px;
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  margin-bottom: 20px;
-}
-
-.hero-motto-quote {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 15px;
-  color: #f1f5f9;
-  font-weight: 600;
 }
 
 .hero-desc {
@@ -564,7 +657,7 @@ body {
 }
 
 /* ==========================================================================
-   OFFICIAL PLAQUE RECREATION (DEEP NAVY & SILVER/GOLD FROM IMAGE 3)
+   OFFICIAL PLAQUE RECREATION (FROM SCREENSHOT 1 & 3)
    ========================================================================== */
 .hero-card-col {
   position: relative;
@@ -591,8 +684,8 @@ body {
 }
 
 .plaque-header-crest {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   margin: 0 auto 12px;
   background: rgba(197, 160, 89, 0.15);
   border-radius: 50%;
@@ -603,14 +696,14 @@ body {
 }
 
 .plaque-header-crest svg {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   fill: var(--gold-light);
 }
 
 .plaque-attorney {
   font-family: var(--font-serif);
-  font-size: 23px;
+  font-size: 22px;
   font-weight: 700;
   color: #ffffff;
   letter-spacing: 0.4px;
@@ -630,8 +723,8 @@ body {
   background: rgba(255, 255, 255, 0.05);
   border: 1.5px solid var(--gold-primary);
   border-radius: var(--radius-md);
-  padding: 18px 16px;
-  margin-bottom: 18px;
+  padding: 16px;
+  margin-bottom: 16px;
   position: relative;
 }
 
@@ -646,7 +739,7 @@ body {
 
 .plaque-fee-amount {
   font-family: var(--font-serif);
-  font-size: 40px;
+  font-size: 38px;
   font-weight: 700;
   color: #ffffff;
   line-height: 1;
@@ -668,7 +761,7 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Urdu Script recreation */
+/* Urdu Script */
 .plaque-urdu-block {
   padding-top: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
@@ -698,6 +791,112 @@ body {
   margin-top: 16px;
   width: 100%;
   justify-content: center;
+}
+
+/* ==========================================================================
+   SENIOR COUNSEL PROFILE (BIG LAW PARTNER OVERVIEW)
+   ========================================================================== */
+.partner-section {
+  padding: 84px 0;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--line-light);
+}
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.partner-image-card {
+  position: relative;
+  background: var(--navy-deep);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 2px solid var(--border-gold);
+}
+
+.partner-image-card img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+}
+
+.partner-floating-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  background: rgba(11, 30, 56, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--gold-border);
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  color: #ffffff;
+}
+
+.partner-floating-badge b {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  color: #ffffff;
+  display: block;
+}
+
+.partner-floating-badge small {
+  font-size: 12px;
+  color: var(--gold-light);
+  font-weight: 700;
+  display: block;
+  margin-top: 2px;
+}
+
+.partner-content h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 3.5vw, 36px);
+  color: var(--navy-primary);
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.partner-lead {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gold-dark);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.partner-content p {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.credentials-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 24px;
+  margin-bottom: 28px;
+}
+
+.credentials-list li {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--navy-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.credentials-list li span {
+  color: var(--gold-dark);
+  font-size: 16px;
 }
 
 /* ==========================================================================
@@ -737,7 +936,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 10px;
-  background: rgba(15, 35, 61, 0.05);
+  background: rgba(11, 30, 56, 0.05);
   border: 1px solid var(--border-gold);
   display: flex;
   align-items: center;
@@ -834,7 +1033,7 @@ body {
 }
 
 .price-card.featured {
-  background: linear-gradient(160deg, #0f233d, #0a192f);
+  background: linear-gradient(160deg, #0b1e38, #071324);
   color: #ffffff;
   border-color: var(--gold-primary);
   box-shadow: var(--shadow-navy);
@@ -847,7 +1046,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(135deg, #c5a059, #b38e46);
-  color: #0a192f;
+  color: #071324;
   font-size: 10px;
   font-weight: 900;
   padding: 4px 16px;
@@ -1006,67 +1205,10 @@ body {
   font-size: 10.5px;
   font-weight: 800;
   color: var(--navy-medium);
-  background: rgba(15, 35, 61, 0.05);
+  background: rgba(11, 30, 56, 0.05);
   padding: 4px 10px;
   border-radius: 6px;
   border: 1px solid var(--line-light);
-}
-
-/* ==========================================================================
-   WHY CHOOSE / VALUES (WHITE SECTION)
-   ========================================================================== */
-.values-section {
-  padding: 84px 0;
-  background-color: var(--bg-white);
-  border-bottom: 1px solid var(--line-light);
-}
-
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.value-card {
-  background: var(--bg-card);
-  border: 1px solid var(--line-light);
-  border-radius: var(--radius-md);
-  padding: 32px 26px;
-  text-align: center;
-  position: relative;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-subtle);
-}
-
-.value-card:hover {
-  border-color: var(--gold-primary);
-  box-shadow: var(--shadow-hover);
-}
-
-.value-badge-icon {
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 16px;
-  border-radius: 50%;
-  background: rgba(197, 160, 89, 0.12);
-  border: 1.5px solid var(--gold-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-}
-
-.value-card h3 {
-  font-family: var(--font-serif);
-  font-size: 20px;
-  color: var(--navy-primary);
-  margin-bottom: 10px;
-}
-
-.value-card p {
-  font-size: 14px;
-  color: var(--text-secondary);
-  line-height: 1.6;
 }
 
 /* ==========================================================================
@@ -1117,7 +1259,7 @@ body {
   width: 38px;
   height: 38px;
   border-radius: 8px;
-  background: rgba(15, 35, 61, 0.05);
+  background: rgba(11, 30, 56, 0.05);
   border: 1px solid var(--line-light);
   display: flex;
   align-items: center;
@@ -1199,7 +1341,7 @@ body {
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   outline: none;
   border-color: var(--navy-primary);
-  box-shadow: 0 0 0 3px rgba(15, 35, 61, 0.1);
+  box-shadow: 0 0 0 3px rgba(11, 30, 56, 0.1);
 }
 
 .form-select option {
@@ -1300,7 +1442,7 @@ body {
   left: 0;
   right: 0;
   z-index: 999;
-  background: rgba(10, 25, 47, 0.98);
+  background: rgba(7, 19, 36, 0.98);
   backdrop-filter: blur(14px);
   border-top: 1.5px solid var(--gold-primary);
   padding: 8px 12px;
@@ -1341,9 +1483,11 @@ body {
   .desktop-nav { display: none; }
   .hamburger-btn { display: flex; }
   .hero-grid { grid-template-columns: 1fr; gap: 36px; }
-  .overseas-grid, .pricing-grid, .practice-grid, .values-grid {
+  .partner-grid { grid-template-columns: 1fr; gap: 32px; }
+  .overseas-grid, .pricing-grid, .practice-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .credentials-list { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
@@ -1356,13 +1500,19 @@ body {
   .brand-crest { width: 38px; height: 38px; }
   .brand-crest svg { width: 20px; height: 20px; }
   
+  .banner-card { padding: 28px 18px; }
+  .banner-crest-icon { width: 50px; height: 50px; margin-bottom: 12px; }
+  .banner-crest-icon svg { width: 26px; height: 26px; }
+  
   .hero-section { padding: 32px 0 46px; }
   .hero-title { font-size: 28px; line-height: 1.2; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero-actions a { justify-content: center; width: 100%; }
   
-  .overseas-grid, .pricing-grid, .practice-grid, .values-grid {
+  .partner-image-card img { height: 340px; }
+  
+  .overseas-grid, .pricing-grid, .practice-grid {
     grid-template-columns: 1fr;
   }
   .price-card.featured { transform: none; }
