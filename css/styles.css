@@ -1,46 +1,58 @@
 /* ==========================================================================
    MUHAMMAD SHER CHHEENA LAW OFFICE — OFFICIAL STYLESHEET
-   Design: Regal Obsidian & Burnished Gold Law Firm
+   Aesthetic: World-Class Oxford Navy & Crisp White Legal Chambers
    ========================================================================== */
 
 :root {
-  /* Core Regal Palette */
-  --bg-primary: #06080d;
-  --bg-secondary: #0c1017;
-  --bg-card: #111722;
-  --bg-card-hover: #161e2c;
+  /* Elite Law Firm Color Palette */
+  --navy-deep: #0a192f;
+  --navy-primary: #0f233d;
+  --navy-medium: #183354;
+  --navy-light: #20436e;
   
-  /* Imperial Champagne Gold Palette */
-  --gold-primary: #d4af37;
-  --gold-light: #f3e5ab;
-  --gold-dark: #aa820a;
-  --gold-glow: rgba(212, 175, 55, 0.25);
-  --gold-border: rgba(212, 175, 55, 0.35);
-  --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #aa820a 100%);
+  /* Antique Legal Gold & Brass */
+  --gold-primary: #c5a059;
+  --gold-dark: #9e7d3b;
+  --gold-light: #e8d7ad;
+  --gold-subtle: rgba(197, 160, 89, 0.12);
+  --gold-border: rgba(197, 160, 89, 0.35);
+
+  /* Backgrounds (Editorial White & Warm Alabaster) */
+  --bg-white: #ffffff;
+  --bg-alabaster: #f8fafc;
+  --bg-cream: #f4f6f9;
+  --bg-card: #ffffff;
   
-  /* Text & Border Colors */
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
+  /* Text & Charcoal Tones */
+  --text-primary: #0f172a;
+  --text-navy: #0f233d;
+  --text-secondary: #475569;
   --text-muted: #64748b;
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-card: rgba(212, 175, 55, 0.2);
+  --text-light: #f8fafc;
+  
+  /* Lines & Borders */
+  --line-light: #e2e8f0;
+  --line-medium: #cbd5e1;
+  --border-gold: rgba(197, 160, 89, 0.3);
   
   /* Accents */
-  --emerald: #10b981;
+  --emerald: #059669;
   --whatsapp: #25d366;
   
   /* Typography */
   --font-serif: 'Cinzel', 'Playfair Display', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-urdu: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaliq', serif;
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 14px rgba(15, 35, 61, 0.05);
+  --shadow-card: 0 8px 24px rgba(15, 35, 61, 0.08);
+  --shadow-hover: 0 16px 36px rgba(15, 35, 61, 0.12);
+  --shadow-navy: 0 12px 32px rgba(10, 25, 47, 0.35);
   
-  /* Shadows & Radius */
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
-  --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.2);
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
 }
 
 *, *::before, *::after {
@@ -56,79 +68,72 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-primary);
+  background-color: var(--bg-white);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.65;
   overflow-x: hidden;
-  padding-bottom: 74px; /* Space for mobile sticky action bar */
+  padding-bottom: 74px; /* Space for mobile bottom bar */
 }
 
 @media (min-width: 900px) {
   body { padding-bottom: 0; }
 }
 
-/* Utilities */
+/* Container */
 .container {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
-.gold-text {
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-}
-
-.gold-divider {
-  height: 2px;
-  width: 60px;
-  background: var(--gold-gradient);
-  margin: 16px auto;
-  border-radius: 2px;
-}
-
+/* Section Header Typography */
 .section-head {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 50px;
 }
 
 .section-kicker {
-  font-family: var(--font-sans);
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--gold-primary);
+  color: var(--gold-dark);
   display: inline-block;
   margin-bottom: 8px;
 }
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: clamp(26px, 4vw, 38px);
-  color: #ffffff;
+  font-size: clamp(26px, 3.8vw, 38px);
+  color: var(--navy-primary);
   font-weight: 700;
   line-height: 1.25;
 }
 
+.gold-divider {
+  height: 2px;
+  width: 54px;
+  background: linear-gradient(90deg, var(--gold-primary), var(--gold-dark));
+  margin: 16px auto;
+  border-radius: 2px;
+}
+
 .section-subtitle {
   color: var(--text-secondary);
-  font-size: clamp(14px, 1.8vw, 16px);
+  font-size: clamp(14.5px, 1.8vw, 16px);
   max-width: 680px;
-  margin: 12px auto 0;
+  margin: 0 auto;
 }
 
 /* ==========================================================================
-   TOP ANNOUNCEMENT BAR
+   TOP EXECUTIVE ANNOUNCEMENT STRIP
    ========================================================================== */
 .top-bar {
-  background: #030508;
-  border-bottom: 1px solid var(--border-subtle);
+  background: var(--navy-deep);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding: 8px 0;
   font-size: 12px;
-  color: var(--text-secondary);
+  color: #cbd5e1;
 }
 
 .top-bar-inner {
@@ -184,17 +189,17 @@ body {
 }
 
 /* ==========================================================================
-   EXECUTIVE NAVIGATION
+   EXECUTIVE NAVIGATION (DEEP NAVY WITH WARM GOLD ACCENTS)
    ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(6, 8, 13, 0.96);
+  background: rgba(15, 35, 61, 0.98);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--gold-border);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid var(--gold-primary);
+  box-shadow: 0 4px 20px rgba(10, 25, 47, 0.25);
   transition: all 0.3s ease;
 }
 
@@ -219,13 +224,13 @@ body {
 .brand-crest {
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, #182232, #0d131d);
+  background: linear-gradient(135deg, #1c3657, #0f233d);
   border: 1.5px solid var(--gold-primary);
-  border-radius: 12px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   flex-shrink: 0;
 }
 
@@ -247,18 +252,18 @@ body {
   font-size: 18px;
   font-weight: 700;
   color: #ffffff;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   white-space: nowrap;
 }
 
 .brand-title span {
-  color: var(--gold-primary);
+  color: var(--gold-light);
 }
 
 .brand-subtitle {
   font-size: 10px;
   font-weight: 800;
-  color: var(--gold-light);
+  color: #94a3b8;
   letter-spacing: 1px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -273,23 +278,22 @@ body {
 }
 
 .desktop-nav a {
-  color: #cbd5e1;
+  color: #e2e8f0;
   text-decoration: none;
   font-size: 13.5px;
   font-weight: 600;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
   white-space: nowrap;
   padding: 6px 0;
-  position: relative;
 }
 
 .desktop-nav a:hover,
 .desktop-nav a.active {
-  color: var(--gold-primary);
+  color: var(--gold-light);
 }
 
 .desktop-nav a.highlight-nav {
-  background: rgba(212, 175, 55, 0.12);
+  background: rgba(197, 160, 89, 0.15);
   border: 1px solid var(--gold-border);
   color: var(--gold-light);
   padding: 6px 14px;
@@ -297,7 +301,7 @@ body {
   font-weight: 700;
 }
 
-/* Header Actions */
+/* Header Buttons */
 .header-actions {
   display: flex;
   align-items: center;
@@ -306,17 +310,17 @@ body {
 }
 
 .btn-gold {
-  background: var(--gold-gradient);
-  color: #06080d;
+  background: linear-gradient(135deg, #c5a059, #b38e46);
+  color: #0a192f;
   font-weight: 800;
-  font-size: 13.5px;
+  font-size: 13px;
   padding: 10px 20px;
   border-radius: 99px;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: var(--shadow-gold);
+  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.3);
   border: none;
   cursor: pointer;
   transition: all 0.25s ease;
@@ -324,15 +328,38 @@ body {
 }
 
 .btn-gold:hover {
+  background: linear-gradient(135deg, #d4af37, #c5a059);
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 8px 20px rgba(197, 160, 89, 0.4);
+}
+
+.btn-navy {
+  background: var(--navy-primary);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 20px;
+  border-radius: 99px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid var(--navy-light);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn-navy:hover {
+  background: var(--navy-medium);
+  border-color: var(--gold-primary);
 }
 
 .btn-outline-gold {
   background: transparent;
   color: var(--gold-light);
   font-weight: 700;
-  font-size: 13.5px;
+  font-size: 13px;
   padding: 10px 20px;
   border-radius: 99px;
   text-decoration: none;
@@ -346,23 +373,23 @@ body {
 }
 
 .btn-outline-gold:hover {
-  background: rgba(212, 175, 55, 0.15);
+  background: rgba(197, 160, 89, 0.15);
   border-color: var(--gold-primary);
   color: #ffffff;
 }
 
 .hamburger-btn {
   display: none;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.08);
   border: 1px solid var(--gold-border);
-  color: var(--gold-primary);
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
+  color: var(--gold-light);
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 19px;
 }
 
 /* Mobile Nav Drawer */
@@ -372,14 +399,13 @@ body {
   top: 72px;
   left: 0;
   right: 0;
-  background: rgba(12, 16, 23, 0.98);
-  backdrop-filter: blur(20px);
+  background: var(--navy-deep);
   border-bottom: 2px solid var(--gold-primary);
   padding: 20px 24px;
   z-index: 999;
   flex-direction: column;
   gap: 14px;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .mobile-nav-drawer.open {
@@ -392,7 +418,7 @@ body {
   font-size: 14.5px;
   font-weight: 700;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -404,27 +430,28 @@ body {
 
 .mobile-nav-drawer a.drawer-highlight {
   color: var(--gold-light);
-  background: rgba(212, 175, 55, 0.12);
+  background: rgba(197, 160, 89, 0.15);
   padding: 12px 14px;
   border-radius: 8px;
   border: 1px solid var(--gold-border);
 }
 
 /* ==========================================================================
-   HERO SECTION
+   HERO SECTION (CLASSIC OXFORD NAVY)
    ========================================================================== */
 .hero-section {
   position: relative;
+  background: linear-gradient(165deg, #0a192f 0%, #0f233d 60%, #0d1e35 100%);
+  color: #ffffff;
+  padding: 60px 0 74px;
   overflow: hidden;
-  padding: 60px 0 70px;
-  background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.09) 0%, transparent 65%),
-              linear-gradient(180deg, #06080d 0%, #0c1017 100%);
+  border-bottom: 1px solid var(--line-light);
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
+  gap: 46px;
   align-items: center;
 }
 
@@ -432,30 +459,34 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(212, 175, 55, 0.12);
+  background: rgba(197, 160, 89, 0.15);
   border: 1px solid var(--gold-border);
   padding: 6px 14px;
   border-radius: 99px;
   font-size: 11px;
   font-weight: 800;
   color: var(--gold-light);
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .hero-title {
   font-family: var(--font-serif);
   font-size: clamp(30px, 4.2vw, 50px);
   font-weight: 700;
-  line-height: 1.18;
+  line-height: 1.16;
   color: #ffffff;
   margin-bottom: 16px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+}
+
+.hero-title span {
+  color: var(--gold-light);
 }
 
 .hero-motto-box {
-  background: rgba(212, 175, 55, 0.08);
+  background: rgba(255, 255, 255, 0.05);
   border-left: 3px solid var(--gold-primary);
   padding: 12px 16px;
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
@@ -465,14 +496,14 @@ body {
 .hero-motto-quote {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 15.5px;
-  color: var(--gold-light);
+  font-size: 15px;
+  color: #f1f5f9;
   font-weight: 600;
 }
 
 .hero-desc {
   font-size: clamp(14px, 1.8vw, 16px);
-  color: var(--text-secondary);
+  color: #cbd5e1;
   line-height: 1.65;
   margin-bottom: 26px;
 }
@@ -482,14 +513,14 @@ body {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 }
 
 .btn-whatsapp {
   background: #1b8e45;
   color: #ffffff;
   font-weight: 700;
-  font-size: 13.5px;
+  font-size: 13px;
   padding: 10px 20px;
   border-radius: 99px;
   text-decoration: none;
@@ -505,44 +536,46 @@ body {
   transform: translateY(-2px);
 }
 
-/* Hero Stats Bar */
+/* 4-Stat Credibility Bar */
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   padding-top: 24px;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .stat-item b {
   font-family: var(--font-serif);
   font-size: 24px;
   font-weight: 700;
-  color: var(--gold-primary);
+  color: var(--gold-light);
   display: block;
   line-height: 1.1;
 }
 
 .stat-item small {
   font-size: 11px;
-  color: var(--text-secondary);
+  color: #94a3b8;
   font-weight: 600;
   line-height: 1.3;
   display: block;
   margin-top: 4px;
 }
 
-/* Hero Card (The Leather Gold Plaque recreation) */
+/* ==========================================================================
+   OFFICIAL PLAQUE RECREATION (DEEP NAVY & SILVER/GOLD FROM IMAGE 3)
+   ========================================================================== */
 .hero-card-col {
   position: relative;
 }
 
 .law-plaque {
-  background: linear-gradient(145deg, #131a26, #090e16);
+  background: linear-gradient(145deg, #112642, #0a192f);
   border: 3px double var(--gold-primary);
   border-radius: var(--radius-lg);
   padding: 34px 28px;
-  box-shadow: var(--shadow-lg), 0 0 40px rgba(212, 175, 55, 0.15);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(197, 160, 89, 0.15);
   position: relative;
   text-align: center;
   overflow: hidden;
@@ -552,27 +585,27 @@ body {
   content: '';
   position: absolute;
   inset: 6px;
-  border: 1px dashed rgba(212, 175, 55, 0.35);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
   border-radius: calc(var(--radius-lg) - 4px);
   pointer-events: none;
 }
 
 .plaque-header-crest {
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
   margin: 0 auto 12px;
-  background: rgba(212, 175, 55, 0.1);
+  background: rgba(197, 160, 89, 0.15);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--gold-border);
+  border: 1.5px solid var(--gold-primary);
 }
 
 .plaque-header-crest svg {
-  width: 30px;
-  height: 30px;
-  fill: var(--gold-primary);
+  width: 28px;
+  height: 28px;
+  fill: var(--gold-light);
 }
 
 .plaque-attorney {
@@ -580,21 +613,21 @@ body {
   font-size: 23px;
   font-weight: 700;
   color: #ffffff;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
   margin-bottom: 4px;
 }
 
 .plaque-office {
   font-size: 10.5px;
   font-weight: 800;
-  color: var(--gold-light);
+  color: #94a3b8;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
 .plaque-fee-badge {
-  background: linear-gradient(180deg, rgba(212, 175, 55, 0.18) 0%, rgba(212, 175, 55, 0.05) 100%);
+  background: rgba(255, 255, 255, 0.05);
   border: 1.5px solid var(--gold-primary);
   border-radius: var(--radius-md);
   padding: 18px 16px;
@@ -617,20 +650,20 @@ body {
   font-weight: 700;
   color: #ffffff;
   line-height: 1;
-  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.4);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .plaque-fee-unit {
   font-size: 13px;
   font-weight: 700;
-  color: var(--gold-primary);
+  color: var(--gold-light);
   margin-top: 4px;
 }
 
 .plaque-fee-target {
   font-family: var(--font-serif);
-  font-size: 13.5px;
-  color: #e2e8f0;
+  font-size: 13px;
+  color: #cbd5e1;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
@@ -638,26 +671,27 @@ body {
 /* Urdu Script recreation */
 .plaque-urdu-block {
   padding-top: 14px;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   direction: rtl;
   font-family: var(--font-urdu), serif;
-  color: var(--gold-light);
+  color: #f1f5f9;
   line-height: 1.9;
 }
 
 .plaque-urdu-title {
   font-size: 21px;
   font-weight: 700;
-  color: var(--gold-primary);
+  color: var(--gold-light);
 }
 
 .plaque-urdu-fee {
   font-size: 19px;
+  color: #ffffff;
 }
 
 .plaque-urdu-sub {
   font-size: 15px;
-  color: #e2e8f0;
+  color: #cbd5e1;
 }
 
 .plaque-btn {
@@ -667,13 +701,12 @@ body {
 }
 
 /* ==========================================================================
-   OVERSEAS PAKISTANI LEGAL CELL
+   OVERSEAS PAKISTANI LEGAL CELL (CRISP ALABASTER SECTION)
    ========================================================================== */
 .overseas-section {
-  padding: 80px 0;
-  background: var(--bg-secondary);
-  border-block: 1px solid var(--border-subtle);
-  position: relative;
+  padding: 84px 0;
+  background-color: var(--bg-alabaster);
+  border-bottom: 1px solid var(--line-light);
 }
 
 .overseas-grid {
@@ -684,27 +717,28 @@ body {
 
 .overseas-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-card);
+  border: 1px solid var(--line-light);
   border-radius: var(--radius-md);
   padding: 32px 26px;
   transition: all 0.3s ease;
   position: relative;
   display: flex;
   flex-direction: column;
+  box-shadow: var(--shadow-subtle);
 }
 
 .overseas-card:hover {
   transform: translateY(-5px);
   border-color: var(--gold-primary);
-  box-shadow: var(--shadow-gold);
+  box-shadow: var(--shadow-hover);
 }
 
 .oc-icon {
   width: 50px;
   height: 50px;
-  border-radius: 12px;
-  background: rgba(212, 175, 55, 0.12);
-  border: 1px solid var(--gold-border);
+  border-radius: 10px;
+  background: rgba(15, 35, 61, 0.05);
+  border: 1px solid var(--border-gold);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -715,7 +749,7 @@ body {
 .overseas-card h3 {
   font-family: var(--font-serif);
   font-size: 19px;
-  color: #ffffff;
+  color: var(--navy-primary);
   margin-bottom: 10px;
   line-height: 1.3;
 }
@@ -734,16 +768,17 @@ body {
   gap: 6px;
   font-size: 11.5px;
   font-weight: 800;
-  color: var(--gold-light);
+  color: var(--gold-dark);
   letter-spacing: 0.5px;
 }
 
 /* ==========================================================================
-   CONSULTATION PACKAGES SECTION
+   CONSULTATION PACKAGES SECTION (EDITORIAL WHITE SECTION)
    ========================================================================== */
 .fees-section {
-  padding: 80px 0;
-  position: relative;
+  padding: 84px 0;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--line-light);
 }
 
 .currency-bar {
@@ -758,13 +793,13 @@ body {
 .curr-label {
   font-size: 13px;
   font-weight: 700;
-  color: var(--text-secondary);
+  color: var(--text-muted);
 }
 
 .curr-btn {
-  background: var(--bg-card);
-  border: 1px solid var(--border-card);
-  color: var(--text-secondary);
+  background: var(--bg-alabaster);
+  border: 1px solid var(--line-light);
+  color: var(--navy-primary);
   padding: 6px 14px;
   border-radius: 99px;
   font-size: 12px;
@@ -774,9 +809,9 @@ body {
 }
 
 .curr-btn.active, .curr-btn:hover {
-  background: var(--gold-gradient);
-  color: #06080d;
-  border-color: transparent;
+  background: var(--navy-primary);
+  color: #ffffff;
+  border-color: var(--navy-primary);
 }
 
 .pricing-grid {
@@ -788,19 +823,21 @@ body {
 
 .price-card {
   background: var(--bg-card);
-  border: 1.5px solid var(--border-subtle);
+  border: 1.5px solid var(--line-light);
   border-radius: var(--radius-lg);
   padding: 36px 26px;
   display: flex;
   flex-direction: column;
   position: relative;
   transition: all 0.3s ease;
+  box-shadow: var(--shadow-subtle);
 }
 
 .price-card.featured {
-  background: linear-gradient(160deg, #151d2a, #0d131d);
+  background: linear-gradient(160deg, #0f233d, #0a192f);
+  color: #ffffff;
   border-color: var(--gold-primary);
-  box-shadow: var(--shadow-gold);
+  box-shadow: var(--shadow-navy);
   transform: scale(1.02);
 }
 
@@ -809,8 +846,8 @@ body {
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--gold-gradient);
-  color: #06080d;
+  background: linear-gradient(135deg, #c5a059, #b38e46);
+  color: #0a192f;
   font-size: 10px;
   font-weight: 900;
   padding: 4px 16px;
@@ -823,8 +860,12 @@ body {
 .price-card h3 {
   font-family: var(--font-serif);
   font-size: 21px;
-  color: #ffffff;
+  color: var(--navy-primary);
   margin-bottom: 8px;
+}
+
+.price-card.featured h3 {
+  color: #ffffff;
 }
 
 .price-card-desc {
@@ -834,22 +875,34 @@ body {
   min-height: 42px;
 }
 
+.price-card.featured .price-card-desc {
+  color: #cbd5e1;
+}
+
 .price-figure {
   margin-bottom: 20px;
   padding-bottom: 18px;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--line-light);
+}
+
+.price-card.featured .price-figure {
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 .price-val {
   font-family: var(--font-serif);
   font-size: 42px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--navy-primary);
   line-height: 1;
 }
 
+.price-card.featured .price-val {
+  color: #ffffff;
+}
+
 .price-val.gold {
-  color: var(--gold-primary);
+  color: var(--gold-light);
 }
 
 .price-cadence {
@@ -859,6 +912,10 @@ body {
   margin-top: 4px;
 }
 
+.price-card.featured .price-cadence {
+  color: #94a3b8;
+}
+
 .price-features {
   list-style: none;
   margin-bottom: 26px;
@@ -866,32 +923,40 @@ body {
 }
 
 .price-features li {
-  font-size: 13px;
-  color: #cbd5e1;
+  font-size: 13.5px;
+  color: var(--text-secondary);
   margin-bottom: 11px;
   display: flex;
   align-items: flex-start;
   gap: 10px;
 }
 
+.price-card.featured .price-features li {
+  color: #e2e8f0;
+}
+
 .price-features li span.check {
-  color: var(--gold-primary);
+  color: var(--gold-dark);
   font-weight: 900;
 }
 
+.price-card.featured .price-features li span.check {
+  color: var(--gold-light);
+}
+
 .price-card .btn-gold,
-.price-card .btn-outline-gold {
+.price-card .btn-navy {
   width: 100%;
   justify-content: center;
 }
 
 /* ==========================================================================
-   PRACTICE AREAS
+   PRACTICE AREAS (WARM ALABASTER SECTION)
    ========================================================================== */
 .practice-section {
-  padding: 80px 0;
-  background: var(--bg-secondary);
-  border-block: 1px solid var(--border-subtle);
+  padding: 84px 0;
+  background-color: var(--bg-alabaster);
+  border-bottom: 1px solid var(--line-light);
 }
 
 .practice-grid {
@@ -902,18 +967,18 @@ body {
 
 .practice-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-card);
+  border: 1px solid var(--line-light);
   border-radius: var(--radius-md);
   padding: 28px 24px;
   transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
 }
 
 .practice-card:hover {
   transform: translateY(-5px);
   border-color: var(--gold-primary);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-hover);
 }
 
 .practice-icon {
@@ -925,7 +990,7 @@ body {
 .practice-card h3 {
   font-family: var(--font-serif);
   font-size: 19px;
-  color: #ffffff;
+  color: var(--navy-primary);
   margin-bottom: 8px;
 }
 
@@ -940,18 +1005,20 @@ body {
   display: inline-block;
   font-size: 10.5px;
   font-weight: 800;
-  color: var(--gold-light);
-  background: rgba(212, 175, 55, 0.1);
+  color: var(--navy-medium);
+  background: rgba(15, 35, 61, 0.05);
   padding: 4px 10px;
   border-radius: 6px;
-  border: 1px solid var(--gold-border);
+  border: 1px solid var(--line-light);
 }
 
 /* ==========================================================================
-   WHY CHOOSE / VALUES SECTION
+   WHY CHOOSE / VALUES (WHITE SECTION)
    ========================================================================== */
 .values-section {
-  padding: 80px 0;
+  padding: 84px 0;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--line-light);
 }
 
 .values-grid {
@@ -962,17 +1029,18 @@ body {
 
 .value-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-card);
+  border: 1px solid var(--line-light);
   border-radius: var(--radius-md);
   padding: 32px 26px;
   text-align: center;
   position: relative;
   transition: all 0.3s ease;
+  box-shadow: var(--shadow-subtle);
 }
 
 .value-card:hover {
   border-color: var(--gold-primary);
-  box-shadow: var(--shadow-gold);
+  box-shadow: var(--shadow-hover);
 }
 
 .value-badge-icon {
@@ -980,7 +1048,7 @@ body {
   height: 56px;
   margin: 0 auto 16px;
   border-radius: 50%;
-  background: rgba(212, 175, 55, 0.12);
+  background: rgba(197, 160, 89, 0.12);
   border: 1.5px solid var(--gold-primary);
   display: flex;
   align-items: center;
@@ -991,7 +1059,7 @@ body {
 .value-card h3 {
   font-family: var(--font-serif);
   font-size: 20px;
-  color: #ffffff;
+  color: var(--navy-primary);
   margin-bottom: 10px;
 }
 
@@ -1002,12 +1070,11 @@ body {
 }
 
 /* ==========================================================================
-   CONSULTATION BOOKING FORM & CONTACT
+   CONSULTATION BOOKING FORM & CONTACT (CRISP ALABASTER SECTION)
    ========================================================================== */
 .contact-section {
-  padding: 80px 0;
-  background: var(--bg-secondary);
-  border-top: 1px solid var(--border-subtle);
+  padding: 84px 0;
+  background-color: var(--bg-alabaster);
 }
 
 .contact-grid {
@@ -1019,15 +1086,16 @@ body {
 
 .contact-info-card {
   background: var(--bg-card);
-  border: 1px solid var(--border-card);
+  border: 1px solid var(--line-light);
   border-radius: var(--radius-lg);
   padding: 34px 28px;
+  box-shadow: var(--shadow-subtle);
 }
 
 .contact-info-card h3 {
   font-family: var(--font-serif);
   font-size: 23px;
-  color: #ffffff;
+  color: var(--navy-primary);
   margin-bottom: 10px;
 }
 
@@ -1048,9 +1116,9 @@ body {
 .ci-icon {
   width: 38px;
   height: 38px;
-  border-radius: 10px;
-  background: rgba(212, 175, 55, 0.12);
-  border: 1px solid var(--gold-border);
+  border-radius: 8px;
+  background: rgba(15, 35, 61, 0.05);
+  border: 1px solid var(--line-light);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1061,33 +1129,34 @@ body {
 .ci-text b {
   display: block;
   font-size: 13px;
-  color: #ffffff;
+  color: var(--navy-primary);
   margin-bottom: 2px;
 }
 
 .ci-text a, .ci-text span {
   font-size: 13.5px;
-  color: var(--gold-light);
+  color: var(--text-secondary);
   text-decoration: none;
 }
 
 .ci-text a:hover {
+  color: var(--navy-primary);
   text-decoration: underline;
 }
 
 /* Interactive Form */
 .booking-form-wrap {
   background: var(--bg-card);
-  border: 1.5px solid var(--gold-border);
+  border: 1.5px solid var(--line-light);
   border-radius: var(--radius-lg);
   padding: 36px 30px;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-card);
 }
 
 .booking-form-wrap h3 {
   font-family: var(--font-serif);
   font-size: 23px;
-  color: #ffffff;
+  color: var(--navy-primary);
   margin-bottom: 8px;
 }
 
@@ -1111,17 +1180,17 @@ body {
   display: block;
   font-size: 12px;
   font-weight: 700;
-  color: #e2e8f0;
+  color: var(--navy-primary);
   margin-bottom: 6px;
 }
 
 .form-input, .form-select, .form-textarea {
   width: 100%;
-  background: rgba(6, 8, 13, 0.85);
-  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  border: 1px solid var(--line-medium);
   border-radius: 8px;
   padding: 11px 13px;
-  color: #ffffff;
+  color: var(--text-primary);
   font-family: var(--font-sans);
   font-size: 13.5px;
   transition: all 0.2s ease;
@@ -1129,13 +1198,13 @@ body {
 
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   outline: none;
-  border-color: var(--gold-primary);
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
+  border-color: var(--navy-primary);
+  box-shadow: 0 0 0 3px rgba(15, 35, 61, 0.1);
 }
 
 .form-select option {
-  background: #0c1017;
-  color: #ffffff;
+  background: #ffffff;
+  color: var(--text-primary);
 }
 
 .form-textarea {
@@ -1150,14 +1219,14 @@ body {
 }
 
 /* ==========================================================================
-   FOOTER
+   FOOTER (OXFORD NAVY)
    ========================================================================== */
 .site-footer {
-  background: #030508;
-  border-top: 1px solid var(--gold-border);
+  background: var(--navy-deep);
+  border-top: 2px solid var(--gold-primary);
   padding: 56px 0 28px;
   font-size: 13.5px;
-  color: var(--text-secondary);
+  color: #94a3b8;
 }
 
 .footer-grid {
@@ -1175,7 +1244,7 @@ body {
 }
 
 .footer-brand p {
-  color: var(--text-muted);
+  color: #94a3b8;
   line-height: 1.6;
   max-width: 320px;
   margin-bottom: 16px;
@@ -1199,24 +1268,24 @@ body {
 }
 
 .footer-col ul li a {
-  color: var(--text-secondary);
+  color: #cbd5e1;
   text-decoration: none;
   transition: color 0.2s;
   font-size: 13px;
 }
 
 .footer-col ul li a:hover {
-  color: var(--gold-primary);
+  color: var(--gold-light);
 }
 
 .footer-bottom {
   padding-top: 22px;
-  border-top: 1px solid var(--border-subtle);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 11.5px;
-  color: var(--text-muted);
+  color: #64748b;
   flex-wrap: wrap;
   gap: 12px;
 }
@@ -1231,12 +1300,12 @@ body {
   left: 0;
   right: 0;
   z-index: 999;
-  background: rgba(6, 8, 13, 0.98);
+  background: rgba(10, 25, 47, 0.98);
   backdrop-filter: blur(14px);
   border-top: 1.5px solid var(--gold-primary);
   padding: 8px 12px;
   gap: 8px;
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .mobile-sticky-bar a {
@@ -1255,9 +1324,9 @@ body {
 }
 
 .mob-call-btn {
-  background: linear-gradient(135deg, #182232, #0d131d);
-  color: var(--gold-light);
-  border: 1px solid var(--gold-border);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .mob-wa-btn {
@@ -1280,7 +1349,7 @@ body {
 
 @media (max-width: 768px) {
   .mobile-sticky-bar { display: flex; }
-  .header-actions .btn-gold { display: none; } /* Kept clean so brand logo doesn't collide */
+  .header-actions .btn-gold { display: none; }
   
   .brand-title { font-size: 16px; }
   .brand-subtitle { font-size: 9px; letter-spacing: 0.6px; }
