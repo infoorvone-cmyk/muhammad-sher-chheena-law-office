@@ -1537,3 +1537,214 @@ body {
   
   .mobile-sticky-bar a { font-size: 12px; padding: 11px 4px; }
 }
+
+/* ==========================================================================
+   MULTI-PAGE INNER TEMPLATE STYLES
+   ========================================================================== */
+.inner-hero {
+  background: linear-gradient(165deg, var(--navy-deep) 0%, #0b1e38 100%);
+  color: #ffffff;
+  padding: 56px 0 60px;
+  border-bottom: 2px solid var(--gold-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.breadcrumb a {
+  color: var(--gold-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: #ffffff;
+}
+
+.inner-hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4.2vw, 44px);
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.inner-hero p {
+  font-size: clamp(14.5px, 1.8vw, 16.5px);
+  color: #cbd5e1;
+  max-width: 720px;
+  line-height: 1.65;
+}
+
+/* Two Column Page Layout with Sticky Sidebar */
+.page-layout {
+  padding: 70px 0 90px;
+  background: var(--bg-white);
+}
+
+.page-grid-sidebar {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 46px;
+  align-items: flex-start;
+}
+
+.content-block {
+  margin-bottom: 44px;
+}
+
+.content-block h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 3vw, 28px);
+  color: var(--navy-primary);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.content-block h3 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--navy-primary);
+  margin: 20px 0 10px;
+}
+
+.content-block p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.content-block ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+}
+
+.content-block ul li {
+  margin-bottom: 10px;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.content-quote {
+  background: var(--bg-alabaster);
+  border-left: 4px solid var(--gold-primary);
+  padding: 20px 24px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 28px 0;
+}
+
+.content-quote p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 16.5px;
+  color: var(--navy-primary);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.content-quote small {
+  color: var(--gold-dark);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+}
+
+/* Sidebar Widgets */
+.sidebar-sticky {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar-widget {
+  background: var(--bg-alabaster);
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-subtle);
+}
+
+.sidebar-widget h4 {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--navy-primary);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line-light);
+}
+
+.sidebar-widget p {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.sidebar-widget .btn-gold,
+.sidebar-widget .btn-navy,
+.sidebar-widget .btn-whatsapp {
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* Legal FAQ Accordion */
+.faq-item {
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-md);
+  margin-bottom: 14px;
+  background: var(--bg-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 18px 22px;
+  text-align: left;
+  background: none;
+  border: none;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.faq-answer {
+  padding: 0 22px 18px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+@media (max-width: 960px) {
+  .page-grid-sidebar {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .sidebar-sticky {
+    position: static;
+  }
+}
